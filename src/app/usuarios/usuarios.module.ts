@@ -1,9 +1,9 @@
-import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { NgModule } from '@angular/core';
+import { MatTableModule } from '@angular/material/table';
 
 import { UsuariosRoutingModule } from './usuarios-routing.module';
 import { UsuariosComponent } from './usuarios/usuarios.component';
-
 
 @NgModule({
   declarations: [
@@ -11,7 +11,8 @@ import { UsuariosComponent } from './usuarios/usuarios.component';
   ],
   imports: [
     CommonModule,
-    UsuariosRoutingModule
+    UsuariosRoutingModule,
+    MatTableModule
   ]
 })
 export class UsuariosModule { }
