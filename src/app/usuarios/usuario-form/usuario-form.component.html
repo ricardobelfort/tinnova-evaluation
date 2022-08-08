@@ -5,6 +5,7 @@
     <mat-form-field class="form-usuario__full-width" appearance="legacy">
       <mat-label>Nome completo [sem abreviações]</mat-label>
       <input matInput placeholder="Nome" formControlName="name" />
+      <mat-error>Campo deve ter 3 caracteres ou mais</mat-error>
     </mat-form-field>
   </p>
   <p>
@@ -15,19 +16,20 @@
         matInput
         placeholder="E-mail"
         formControlName="email"
+        required
       />
       <mat-error *ngIf="form.hasError('email') && !form.hasError('required')">
-        Please enter a valid email address
+        Por favor, insira um e-mail válido
       </mat-error>
       <mat-error *ngIf="form.hasError('required')">
-        Email is <strong>required</strong>
+        E-mail é <strong>obrigatório</strong>
       </mat-error>
     </mat-form-field>
   </p>
   <p>
     <mat-form-field class="form-usuario__full-width" appearance="legacy">
       <mat-label>CPF</mat-label>
-      <input matInput placeholder="CPF" formControlName="cpf" />
+      <input type="text" matInput placeholder="CPF" formControlName="cpf" />
     </mat-form-field>
   </p>
   <p>
@@ -41,5 +43,7 @@
       />
     </mat-form-field>
   </p>
-  <button class="btn-submit">Cadastrar</button>
+  <button class="btn-submit" [disabled]="form.invalid && !isUpdate">
+    {{ !isUpdate ? "Cadastrar" : "Atualizar" }}
+  </button>
 </form>

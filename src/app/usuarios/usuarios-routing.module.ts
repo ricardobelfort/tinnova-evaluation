@@ -1,7 +1,8 @@
-import { UsuarioFormComponent } from './usuario-form/usuario-form.component';
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 
+import { UsuarioResolverService } from './services/usuario-resolver.service';
+import { UsuarioFormComponent } from './usuario-form/usuario-form.component';
 import { UsuariosComponent } from './usuarios/usuarios.component';
 
 const routes: Routes = [
@@ -12,6 +13,16 @@ const routes: Routes = [
   {
     path: 'novo',
     component: UsuarioFormComponent,
+    resolve: {
+      usuario: UsuarioResolverService,
+    },
+  },
+  {
+    path: 'alterar/:id',
+    component: UsuarioFormComponent,
+    resolve: {
+      usuario: UsuarioResolverService,
+    },
   },
 ];
 

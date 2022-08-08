@@ -1,7 +1,7 @@
 export interface Usuario {
-  id?: number;
-  name: string;
-  cpf: string;
-  phone: string;
-  email: string;
+  id: number | null;
+  name: string | null;
+  email: string | null;
+  cpf: string | null;
+  phone: string | null;
 }
