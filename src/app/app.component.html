@@ -1,5 +1,14 @@
 <mat-toolbar color="primary">
-  <span>Tinnova EV - Cadastro de Usuários</span>
+  <mat-toolbar-row>
+    <button mat-icon-button>
+      <mat-icon (click)="home()">home</mat-icon>
+    </button>
+    <span>CRUD Usuários</span>
+    <span class="example-spacer"></span>
+    <button mat-raised-button color="accent" (click)="addNew()">
+      Novo Usuário
+    </button>
+  </mat-toolbar-row>
 </mat-toolbar>
 <div class="container">
   <router-outlet></router-outlet>

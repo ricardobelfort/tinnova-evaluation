@@ -1,18 +1,19 @@
 import { CommonModule } from '@angular/common';
 import { NgModule } from '@angular/core';
-import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
-import { MatTableModule } from '@angular/material/table';
+import { ReactiveFormsModule } from '@angular/forms';
 
+import { AppMaterialModule } from '../shared/app-material/app-material.module';
+import { UsuarioFormComponent } from './usuario-form/usuario-form.component';
 import { UsuariosRoutingModule } from './usuarios-routing.module';
 import { UsuariosComponent } from './usuarios/usuarios.component';
 
 @NgModule({
-  declarations: [UsuariosComponent],
+  declarations: [UsuariosComponent, UsuarioFormComponent],
   imports: [
     CommonModule,
     UsuariosRoutingModule,
-    MatTableModule,
-    MatProgressSpinnerModule,
+    AppMaterialModule,
+    ReactiveFormsModule,
   ],
 })
 export class UsuariosModule {}
