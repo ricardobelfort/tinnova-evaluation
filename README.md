@@ -1,5 +1,9 @@
 # TinnovaApp
 
+Este projeto é apenas para efeito de avaliação e foi feito usando Angular 12 e integração com API JSON Server.
+
+Para rodar o projeto, basta fazer o download do repo, fazer um npm install para baixar as dependências, depois de rodar o projeto, não esquecer de rodar o json-server para emular a API.
+
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 12.2.18.
 
 ## Development server
